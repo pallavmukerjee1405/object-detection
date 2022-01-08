@@ -1,4 +1,3 @@
-img="";
 status_quo="";
 objects=[];
 
@@ -33,11 +32,11 @@ function draw(){
     image(video,0,0,640,420);
     
     if(status_quo != ""){
-    r=random(255);
-    g=random(255);
-    b=random(255);
+     r=random(255);
+     g=random(255);
+     b=random(255);
     
-    object_detector.detect(video,gotResult);
+     object_detector.detect(video,gotResult);
         for(i=0;i<objects.length;i++){
             document.getElementById("status").innerHTML="Status : Object Detected";
             document.getElementById("number_of_objects").innerHTML="Number of objects detected - "+objects.length;
