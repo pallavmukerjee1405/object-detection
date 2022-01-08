@@ -1,7 +1,7 @@
 img="";
 status_quo="";
 objects=[];
-number_of_objects="";
+
 
 
 function setup(){
@@ -40,7 +40,7 @@ function draw(){
     object_detector.detect(video,gotResult);
         for(i=0;i<objects.length;i++){
             document.getElementById("status").innerHTML="Status : Object Detected";
-            document.getElementById("number_of_objects").innerHTML="Number of objects detected - "+number_of_objects;
+            document.getElementById("number_of_objects").innerHTML="Number of objects detected - "+objects.length;
             percent=floor(objects[i].confidence*100);
             fill(r,g,b);
             text(objects[i].label + " " + percent + "%" + objects[i].x,objects[i].y);
